@@ -1,0 +1,31 @@
+{
+  "description": "Convention checks on every Write/Edit: secrets (before) and braces / file size (after).",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/secret-guard.py\"",
+            "timeout": 10,
+            "statusMessage": "Checking for secrets..."
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/code-guard.py\"",
+            "timeout": 10,
+            "statusMessage": "Checking conventions..."
+          }
+        ]
+      }
+    ]
+  }
+}

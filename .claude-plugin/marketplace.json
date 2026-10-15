@@ -16,6 +16,11 @@
       "name": "session-tracking",
       "source": "./plugins/session-tracking",
       "description": "Open and close work sessions: load project context, write a per-session resume, and keep time-tracking tables up to date."
+    },
+    {
+      "name": "conventions-guard",
+      "source": "./plugins/conventions-guard",
+      "description": "Hooks enforcing conventions as Claude writes: braces on control statements, 500-line limit on Node/TS files, no secrets in committed files."
     }
   ]
 }
