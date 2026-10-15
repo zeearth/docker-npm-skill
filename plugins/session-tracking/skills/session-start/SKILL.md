@@ -1,7 +1,6 @@
 ---
 name: session-start
-description: Load project context and open a work session in the time-tracking file(s). Run it manually at the beginning of a work session.
-disable-model-invocation: true
+description: Load project context and open a work session in the time-tracking file(s). Use when the user asks to start, begin or open a work session (e.g. "start the session", "débute la session", "on commence"), or runs /session-start.
 ---
 
 # session-start
