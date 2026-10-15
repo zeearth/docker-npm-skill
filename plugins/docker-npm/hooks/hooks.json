@@ -1,0 +1,17 @@
+{
+  "description": "Block host-side package installs in projects that run in Docker and point to the docker-npm skill.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/docker-guard.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

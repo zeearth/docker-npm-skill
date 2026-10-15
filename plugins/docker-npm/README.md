@@ -51,6 +51,18 @@ Claude also triggers it from plain requests such as "add zod to the web app".
 
 Actions: `install`, `update`, `remove`, `list`, `outdated`, `audit`, `sync`.
 
+## Guard hook (plugin install only)
+
+When installed as a plugin, a `PreToolUse` hook on `Bash` blocks package changes made on the host
+(`npm|pnpm|yarn|bun` with `install`, `add`, `remove`, `update`, `ci`...) as soon as a compose file
+(`docker-compose*.yml` or `compose*.yml`) exists in the working directory or a parent, and tells Claude
+to use this skill instead. It does not touch `pnpm test`, `npm run build`, global installs (`-g`) or
+commands that already run in a container (`docker compose run ... pnpm add`). Projects without a compose
+file are unaffected.
+
+One-off bypass: prefix the command with `DOCKER_NPM_ALLOW_HOST=1`. Requires `python3` on the host.
+The hook is not part of the plain-skill install.
+
 ## Limits
 
 - Native binaries copied to the host only run if the host has the same OS and architecture as the container (true for Linux and WSL). Otherwise you still get the types.
