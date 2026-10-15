@@ -21,14 +21,14 @@ When Node runs in Docker, running `npm install` on the host builds `node_modules
 As a plain skill (global):
 
 ```bash
-git clone https://github.com/zeearth/claude-skills.git
+git clone https://github.com/zeearth/zeearth-skills.git
 mkdir -p ~/.claude/skills
-cp -r claude-skills/plugins/docker-npm/skills/docker-npm ~/.claude/skills/
+cp -r zeearth-skills/plugins/docker-npm/skills/docker-npm ~/.claude/skills/
 ```
 
 For a single project, copy `plugins/docker-npm/skills/docker-npm` to `<project>/.claude/skills/` instead.
 
-As a plugin: `/plugin marketplace add zeearth/claude-skills`, then `/plugin install docker-npm@claude-skills`.
+As a plugin: `/plugin marketplace add zeearth/zeearth-skills`, then `/plugin install docker-npm@zeearth-skills`.
 
 ## Usage
 

@@ -1,0 +1,7 @@
+{
+  "name": "session-tracking",
+  "description": "Open and close work sessions: load project context, write a per-session resume, and keep time-tracking tables up to date.",
+  "version": "1.0.0",
+  "author": { "name": "ZeEarth" },
+  "license": "MIT"
+}
