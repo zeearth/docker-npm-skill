@@ -1,8 +1,7 @@
 ---
 name: session-end
-description: Close the current work session: write a resume file, update the project summary, and close the time-tracking row(s). Run it manually at the end of a work session.
+description: Close the current work session: write a resume file, update the project summary, and close the time-tracking row(s). Use when the user asks to end, close or wrap up the session (e.g. "end the session", "termine la session", "on arrête là"), or runs /session-end.
 argument-hint: [short summary of what was accomplished]
-disable-model-invocation: true
 ---
 
 # session-end
