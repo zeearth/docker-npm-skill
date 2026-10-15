@@ -1,0 +1,21 @@
+{
+  "name": "zeearth-skills",
+  "owner": {
+    "name": "ZeEarth"
+  },
+  "metadata": {
+    "description": "Small, focused Claude Code plugins for day-to-day development workflows."
+  },
+  "plugins": [
+    {
+      "name": "docker-npm",
+      "source": "./plugins/docker-npm",
+      "description": "Run npm/pnpm/yarn/bun operations inside a project's Docker container and keep the host node_modules in sync for the IDE."
+    },
+    {
+      "name": "session-tracking",
+      "source": "./plugins/session-tracking",
+      "description": "Open and close work sessions: load project context, write a per-session resume, and keep time-tracking tables up to date."
+    }
+  ]
+}
