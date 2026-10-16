@@ -1,5 +1,5 @@
 {
-  "description": "Convention checks on every Write/Edit: secrets (before) and braces / file size (after).",
+  "description": "Convention checks on every Write/Edit: secrets (before), braces / file size / Markdown language (after).",
   "hooks": {
     "PreToolUse": [
       {
@@ -23,6 +23,12 @@
             "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/code-guard.py\"",
             "timeout": 10,
             "statusMessage": "Checking conventions..."
+          },
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/lang-guard.py\"",
+            "timeout": 10,
+            "statusMessage": "Checking Markdown language..."
           }
         ]
       }
