@@ -1,7 +1,7 @@
 {
   "name": "conventions-guard",
   "description": "Hooks that enforce coding conventions as Claude writes: braces on every control statement, 500-line limit on Node/TypeScript files, and no secrets in committed files.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": { "name": "ZeEarth" },
   "license": "MIT"
 }
