@@ -21,6 +21,11 @@
       "name": "conventions-guard",
       "source": "./plugins/conventions-guard",
       "description": "Hooks enforcing conventions as Claude writes: braces on control statements, 500-line limit on Node/TS files, no secrets in committed files."
+    },
+    {
+      "name": "personas",
+      "source": "./plugins/personas",
+      "description": "Switch Claude into an expert persona with /persona (CTO, web designer, DBA...). Global personas are completed, not replaced, by per-project files."
     }
   ]
 }

@@ -1,0 +1,7 @@
+{
+  "name": "personas",
+  "description": "Switch Claude into an expert persona (CTO, senior web designer, DBA...) with /persona. Global personas can be completed per project: sections are merged, not replaced wholesale.",
+  "version": "1.0.0",
+  "author": { "name": "ZeEarth" },
+  "license": "MIT"
+}
